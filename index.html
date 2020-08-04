@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Saira+Condensed&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-drawer"></div>
+      <div class="card-product">
+        
+        <div class="detail-text">
+          <div class="card-title">
+            <h2>
+              Shift the overall look and feel by adding these wonderful touches to
+              furniture in your home
+            </h2>
+          </div>
+          <div class="card-text">
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps it
+              felt slightly bare and uninviting. I’ve got some simple tips to help
+              you make any room feel complete.
+            </p>
+          </div>
+        </div>
+          
+        <div class="detail-profile">
+          <div class="author">
+            <img src="images/avatar-michelle.jpg" alt="avatar" class="avatar" />
+            <div class="profile-data">
+              <span>Michelle Appleton</span>
+              <span class="date">28 Jun 2020</span>
+            </div>
+          </div>
+
+          <div class="share-button" onclick="share()">
+            <img src="images/icon-share.svg" alt="Share" />
+            
+            <div class="social">
+              <span>Share</span>
+              <div class="social-icons">
+                <a href="#" title="Facebook" target="_blank" class="icon-social">
+                    <img src="images/icon-facebook.svg" alt="Facebook">
+                </a>
+                <a href="#" title="Twitter" target="_blank" class="icon-social">
+                  <img src="images/icon-twitter.svg" alt="Twitter">
+                </a>
+                <a href="#" title="Pinterest" target="_blank" class="icon-social">
+                  <img  src="images/icon-pinterest.svg" alt="Pinterest">
+                </a>
+              </div>
+            </div>
+            <div class="arrow-down"></div>
+          </div>
+        </div>
+        
+    
+        
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">NI1GHTMARE</a>.
+    </div>
+
+    <script>
+      function share() {
+        
+        let social = document.getElementsByClassName("social")[0];
+        let arrow = document.getElementsByClassName("arrow-down")[0];
+        if (social.style.display == "none") {
+          social.style.display = "flex";
+          arrow.style.display = "block";
+        } else {
+          social.style.display = "none";
+          arrow.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  /* background-color: #273b47; */
+  background-color: var(--Light-Grayish-Blue);
+}
+
+.card {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.card-drawer {
+  display: inherit;
+  width: inherit;
+  background-image: url("images/drawers.jpg");
+  background-size: cover;
+  background-position: center center;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  /* border: 2px solid purple; */
+}
+
+.card-product {
+  display: inherit;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  width: inherit;
+  padding: 30px;
+  /* border: 1px solid orange; */
+}
+
+.detail-text {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid blue; */
+}
+
+.card-title {
+  color: var(--Very-Dark-Grayish-Blue);
+  /* border: 1px solid green; */
+}
+
+.card-text {
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  color: var(--Grayish-Blue);
+  padding-top: 1em;
+  padding-bottom: 1.3em;
+  /* text-align: justify; */
+  /* border: 1px solid red; */
+}
+
+.detail-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 700;
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 13px;
+  /* border: 1px solid lawngreen; */
+}
+
+.author {
+  display: inherit;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.avatar {
+  height: 3em;
+  width: 3em;
+  border-radius: 150px;
+  margin-right: 20px;
+  /* border: 1px solid blue; */
+}
+
+.profile-data {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  /* border: 1px solid grey; */
+}
+
+.date {
+  font-weight: 400;
+  color: var(--Grayish-Blue);
+}
+
+.share-button {
+  position: relative;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  background-color: var(--Light-Grayish-Blue);
+  padding: 8px;
+  /* border: 1px solid purple; */
+}
+
+.share-button:hover,
+.share-button:active {
+  background-color: var(--Very-Dark-Grayish-Blue); 
+  cursor: pointer;
+}
+
+.share-button:hover img,
+.share-button:active img{
+  filter: brightness(5);
+}
+
+.arrow-down {
+  display: none;
+  position: absolute;
+  bottom: 3em;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--Very-Dark-Grayish-Blue); 
+}
+
+.social {
+  display: none;
+  position: absolute;
+  align-items: center;
+  background-color: var(--Very-Dark-Grayish-Blue);  
+  margin-top: -15.3vh;
+  margin-left: -7.5vw;
+  border-radius: 10px;
+  padding: 0 2vw 0 2vw;
+  /* border: 1px solid red; */
+}
+
+.social span {
+  text-transform: uppercase;
+  color: var(--Grayish-Blue);
+  letter-spacing: 7px;
+  /* border: 1px solid violet; */
+}
+
+.social-icons{
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+.icon-social {
+  padding: 15px 10px;
+  /* border: 1px solid yellow; */
+}
+
+.attribution {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  font-family: "Saira Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  /* border: 1px solid goldenrod; */
+}
+
+.attribution > a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 899px) {
+  .card {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* border: 1px solid orange; */
+  }
+
+  .card-drawer {
+    display: inherit;
+    width: 100%;
+    height: 40vh;
+    border-radius: 15px 15px 0 0;
+    /* border: 1px solid red; */
+  }
+
+  .card-product {
+    width: initial;
+    padding: initial;
+    /* border: 1px solid orange; */
+  }
+
+  .detail-text {
+    padding: 30px 30px 0 30px;
+    /* border: 1px solid red; */
+  }
+
+  .detail-profile{
+    padding: 15px 30px 15px 30px;
+    /* border: 1px solid blue; */
+  }
+
+  .card-title h2 {
+    font-size: 1.2em;
+  }
+
+  .card-title,
+  .card-text {
+    text-align: justify;
+  }
+
+  .card-text {
+    padding-top: 1.5em;
+    padding-bottom: 2.5em;
+  }
+
+  .share-button {
+    line-height: 10px;
+    position: unset;
+    margin: 15px 20px;
+  }
+
+  .arrow-down{
+    display: none!important;
+  }
+}
